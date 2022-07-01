@@ -5,4 +5,4 @@ import App from './App.js';
 const root = createRoot(document.querySelector("#root"));
 
 // RENDERIZANDO
-root.render(<App />);
+root.render(<App/>);
