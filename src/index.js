@@ -1,8 +1,6 @@
-// PEGANDO O INDEX HTML
 import { createRoot } from "react-dom/client";
-import App from './App.js';
+import App from "./App";
 
 const root = createRoot(document.querySelector("#root"));
 
-// RENDERIZANDO
-root.render(<App/>);
+root.render(<App />);

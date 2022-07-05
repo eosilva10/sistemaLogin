@@ -1,30 +1,29 @@
-import { Fragment } from "react"; // IMPORTANDO APENAS O FRAGMENT DA LIB REACT
-import { BrowserRouter, Route, Routes } from "react-router-dom"; // IMPORTS NECESSARIOS DO REACT-ROUTER-DOM
-// IMPORTANDO COMPONENTES CRIADOS:
-import Home from '../pages/Home';
-import SignIn from '../pages/SignIn';
-import SignUp from '../pages/SignUp';
+import { Fragment } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import Home from "../pages/Home";
+import Signin from "../pages/SignIn";
+import Signup from "../pages/SignUp";
 
-// CONDIÇÃO PARA DIRECIONAR OS LINKS SOMENTE SE ESTIVER LOGADO
 const Private = ({ Item }) => {
-    const signed  = false;
+  const { signed } = useAuth();
 
-    return signed > 0 ? <Item /> : <SignIn />;
+  return signed > 0 ? <Item /> : <Signin />;
 };
 
 const RoutesApp = () => {
-    return(
-        <BrowserRouter>
-            <Fragment>
-                <Routes>
-                    <Route exact path="/home" element={<Private Item={Home}/>} /> 
-                    <Route path="/" element={<SignIn />} /> 
-                    <Route exact path="/signup" element={<SignUp />} /> 
-                    <Route path="*" element={<SignIn />} /> 
-                </Routes>
-            </Fragment>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Fragment>
+        <Routes>
+          <Route exact path="/home" element={<Private Item={Home} />} />
+          <Route path="/" element={<Signin />} />
+          <Route exact path="/signup" element={<Signup />} />
+          <Route path="*" element={<Signin />} />
+        </Routes>
+      </Fragment>
+    </BrowserRouter>
+  );
 };
 
 export default RoutesApp;
