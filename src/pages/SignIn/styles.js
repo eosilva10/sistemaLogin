@@ -20,7 +20,8 @@ export const Content = styled.div`
   background-color: white;
   max-width: 350px;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px 1px rgba(0, 0, 0, 0.33);
 `;
 
 export const Label = styled.label`
