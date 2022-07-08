@@ -35,6 +35,11 @@ export const Content = styled.div`
   button {
     background-color: #0CA06A;
     color: white;
+    transition: all 200ms ease-in;
+  }
+
+  button:hover {
+    background-color: #20D090;
   }
 `;
 

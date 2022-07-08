@@ -9,4 +9,10 @@ export const Container = styled.div`
   gap: 20px;
 `;
 
-export const Title = styled.h2``;
+export const Title = styled.h2`
+font-style: italic;
+font-size: 25px;
+font-weight: 400;
+color: white;
+margin-bottom: 10px;
+`;
