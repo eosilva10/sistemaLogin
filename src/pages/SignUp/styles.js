@@ -17,17 +17,33 @@ export const Content = styled.div`
   flex-direction: column;
   width: 100%;
   box-shadow: 0 1px 2px #0003;
-  background-color: white;
+  background-color: #31302F;
   max-width: 350px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 8px 8px 1px rgba(0, 0, 0, 0.33);
+
+  input {
+    background-color: #5D5C5B;
+    color: white;
+  }
+
+  input::placeholder {
+    color: #C1C1BC;
+  }
+
+  button {
+    background-color: #0CA06A;
+    color: white;
+  }
 `;
 
 export const Label = styled.label`
-  font-size: 18px;
-  font-weight: 200;
-  color: #676767;
+font-style: italic;
+font-size: 25px;
+font-weight: 400;
+color: white;
+margin-bottom: 10px;
 `;
 
 export const LabelSignin = styled.label`

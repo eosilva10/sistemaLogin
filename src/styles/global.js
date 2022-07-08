@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     width: 100vw;
     height: 100vh;
-    background-color: #F7B17C;
+    background-color: #33BC9B;
     font-family: "Segoe UI", Helvetica, sans-serif
   }
 `;
